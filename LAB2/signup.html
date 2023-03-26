@@ -8,7 +8,7 @@
     <body>
         <div class="header">
             <a href="https://fontmeme.com/pokemon-font/">
-                <img src="https://fontmeme.com/permalink/230326/ef7a4d9fbbd6274840b6a1513cfd08d5.png" alt="pokemon-shop" border="0">
+                <img src="https://fontmeme.com/permalink/230326/ef7a4d9fbbd6274840b6a1513cfd08d5.png" alt="pokemon-shop">
             </a>
         </div>
         <div class="menu">
@@ -20,44 +20,77 @@
             <form method="post" action="http://www.example.com">
                 <p>
                     <label>이름:
-                        <input name = "name" type = "text" size = "25" autofocus required/>
+                        <input name = "name" type = "text" size = "25" autofocus required>
                     </label>
                 </p>
                 <p>
                     <label>이메일:
-                        <input name = "email" type = "email" placeholder="name@domain.com" required/>
+                        <input name = "email" type = "email" placeholder="name@domain.com" required autocomplete="on">
                     </label>
                 </p>
                 <p>
                     <label>아이디:
-                        <input name = "id" type = "text" size = "25" required/>
+                        <input name = "id" type = "text" size = "25" required>
                     </label>
                 </p>
                 <p>
                     <label>비밀번호:
-                        <input name = "password" type = "password" placeholder = "비밀번호" required/>
+                        <input name = "password" type = "password" placeholder = "비밀번호" required>
                     </label>
                 </p>
                 <p>
                     <label>비밀번호 확인:
-                        <input name = "password" type="password" placeholder = "비밀번호 확인" required/>
+                        <input name = "password" type="password" placeholder = "비밀번호 확인" required>
                     </label>
                 </p>
                 <p>
                     <label>생일:
-                        <input name = "date" type = "date"/>
+                        <input name = "date" type = "date">
                     </label>
                 </p>
                 <p>
                     <label>학년:
-                        <input name = "grade" type = "text" size = "25" maxlength="1"/>
+                        <input name = "grade" type = "number" min = "1" max = "4" step = "1">
                     </label>
                 </p>
                 <p>
                     <label>전화번호:
-                        <input name = "tel" type = "tel" placeholder="(###) ###-####"/>
+                        <input name = "tel" type = "tel" placeholder="(###) ###-####">
                     </label>
                 </p>
+                <br>
+                <p>
+                    관심사<br>
+                    <label>포켓몬고
+                        <input name = "interest" type="checkbox" value = "Pokemongo">
+                    </label>
+                    <label>포켓몬 바이올렛
+                        <input name = "interest" type="checkbox" value = "Violet">
+                    </label>
+                    <label>포켓몬 스칼렛
+                        <input name = "interest" type="checkbox" value = "Scarlet">
+                    </label>
+                    <label>포켓몬 펄
+                        <input name = "interest" type="checkbox" value = "Pearl">
+                    </label>
+                    <label>포켓몬 다이아
+                        <input name = "interest" type="checkbox" value = "Diamond">
+                    </label>
+                </p>
+                <p>
+                    방문 경로<br>
+                    <label>블로그 홍보
+                        <input name = "approach" type="radio" value = "blog">
+                    </label>
+                    <label>광고
+                        <input name = "approach" type="radio" value = "ad">
+                    </label>
+                    <label>지인 추천
+                        <input name = "approach" type="radio" value = "acquaintance">
+                    </label>
+                </p>
+                <br>
+                <br>
                 <p>
                     <input class="signup-submit signup-button" type="submit" value="완료">
                     <input class="signup-reset signup-button" type="reset" value="취소">
