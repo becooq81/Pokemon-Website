@@ -4,8 +4,8 @@ html {
 /* 헤더 */
 .header {
     display: block;
-    margin: 2% auto 0px auto;
-    width: 80%;
+    margin: auto;
+    width: 50%;
 }
 /* 메뉴 */
 .menu {
