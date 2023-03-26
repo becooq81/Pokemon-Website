@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Sign up</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div class="header">
+            <a href="https://fontmeme.com/pokemon-font/">
+                <img src="https://fontmeme.com/permalink/230326/ef7a4d9fbbd6274840b6a1513cfd08d5.png" alt="pokemon-shop" border="0">
+            </a>
+        </div>
+        <div class="menu">
+            <a href="login.html">로그인</a>
+            <a href="signup.html">회원가입</a>
+        </div>
+        <div class="signup">
+            <h3>회원 가입</h3>
+            <form method="post" action="http://www.example.com">
+                <p>
+                    <label>이름:
+                        <input name = "name" type = "text" size = "25" autofocus required/>
+                    </label>
+                </p>
+                <p>
+                    <label>이메일:
+                        <input name = "email" type = "email" placeholder="name@domain.com" required/>
+                    </label>
+                </p>
+                <p>
+                    <label>아이디:
+                        <input name = "id" type = "text" size = "25" required/>
+                    </label>
+                </p>
+                <p>
+                    <label>비밀번호:
+                        <input name = "password" type = "password" placeholder = "비밀번호" required/>
+                    </label>
+                </p>
+                <p>
+                    <label>비밀번호 확인:
+                        <input name = "password" type="password" placeholder = "비밀번호 확인" required/>
+                    </label>
+                </p>
+                <p>
+                    <label>생일:
+                        <input name = "date" type = "date"/>
+                    </label>
+                </p>
+                <p>
+                    <label>학년:
+                        <input name = "grade" type = "text" size = "25" maxlength="1"/>
+                    </label>
+                </p>
+                <p>
+                    <label>전화번호:
+                        <input name = "tel" type = "tel" placeholder="(###) ###-####"/>
+                    </label>
+                </p>
+                <p>
+                    <input class="signup-submit signup-button" type="submit" value="완료">
+                    <input class="signup-reset signup-button" type="reset" value="취소">
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
