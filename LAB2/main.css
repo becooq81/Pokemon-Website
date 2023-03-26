@@ -3,9 +3,8 @@ html {
 }
 /* 헤더 */
 .header {
-    display: block;
-    margin: auto;
-    width: 60%;
+    text-align:center;
+    display:block;
 }
 /* 메뉴 */
 .menu {
