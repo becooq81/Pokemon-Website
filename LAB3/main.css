@@ -29,9 +29,8 @@ html {
 /* 메뉴 */
 .menu {
     background-color: #0075BE;
-    overflow: hidden;
-    margin: 10px 10px;
-    height: 60px;
+    margin: 2%;
+    height: 10%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,7 +40,7 @@ html {
     float: left;
     color: white;
     text-align: center;
-    padding: 20px 20px;
+    padding: 2%;
     text-decoration: none;
     font-size: 20px;
 }
@@ -117,6 +116,9 @@ html {
     .item-list {
       flex-direction: column !important;
     }
+    .menu {
+        flex-direction: column !important;
+    }
 }
 @media screen and (min-width: 481px) and (max-width: 800px) {
     .item-list {
@@ -126,9 +128,19 @@ html {
     .items {
         flex-basis: 40% !important;
     }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu a {
+        flex-basis: 40% !important;
+    }
 }
 @media screen and (min-width: 801px) {
     .item-list {
+        flex-direction: row;
+    }
+    .menu {
         flex-direction: row;
     }
 }
