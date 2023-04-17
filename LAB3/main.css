@@ -1,7 +1,7 @@
 html {
-    font-family:'Courier New', Courier, monospace
+    max-width: 1020px;
+    margin:0 auto;
 }
-
 /* 헤더 */
 .header {
     color: #FFCC00;
@@ -12,6 +12,18 @@ html {
     1px 1px 0 #0075BE; 
     text-align: center;
     font-size: 40px;
+}
+.header h1 {
+    animation-duration: 2s;
+    animation-name: movingText;
+}
+@keyframes movingText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* 메뉴 */
@@ -61,11 +73,11 @@ html {
 .items {
     display: flex;
     flex-direction: row;
-    margin: 5%;
+    margin: 2%;
     flex-wrap: wrap;
 }
 .poke-img {
-    width: 100px;
+    width: 150px;
     transition: transform 2s;
 }
 .poke-img:hover {
@@ -98,4 +110,25 @@ html {
 .item {
     padding: 10px;
     margin: 5px;
+    flex-shrink: 0;
+}
+/* 화면 조정 */
+@media screen and (max-width: 480px) {
+    .item-list {
+      flex-direction: column !important;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 800px) {
+    .item-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .items {
+        flex-basis: 40% !important;
+    }
+}
+@media screen and (min-width: 801px) {
+    .item-list {
+        flex-direction: row;
+    }
 }
