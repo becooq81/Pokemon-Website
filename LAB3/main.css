@@ -5,6 +5,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    max-width: 1020px;
 }
 /* 헤더 */
 .header {
@@ -32,20 +33,26 @@ body {
 
 /* 메뉴 */
 .menu {
+    width: 100%;
     background-color: #0075BE;
-    height: 10%;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 .menu a {
-    float: left;
+    width: 100px;
+    height: 100%;
     color: white;
     text-align: center;
-    padding: 2%;
     text-decoration: none;
     font-size: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 .menu a:hover {
     background-color: #D5A100;
@@ -71,11 +78,19 @@ body {
 .signup-reset {
     background-color: #D5A100;
 }
+
 /* 상품 */
+.itemlist {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
 .items {
     display: flex;
     flex-direction: row;
-    margin: 2%;
     flex-wrap: wrap;
 }
 .poke-img {
@@ -99,6 +114,7 @@ body {
     text-align: center;
     visibility: hidden;
     opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 .item:hover .description {
     visibility: visible;
@@ -108,6 +124,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: left;
+    width: 100%;
 }
 .item {
     padding: 10px;
