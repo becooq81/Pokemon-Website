@@ -1,0 +1,62 @@
+[
+    {
+        "Id": 1,
+        "Name": "Tapu Koko",
+        "Price": 20
+    },
+    {
+        "Id": 2,
+        "Name": "Kyogre",
+        "Price": 25
+    },
+    {
+        "Id": 3,
+        "Name": "Rayqueza",
+        "Price": 26
+    },
+    {
+        "Id": 4,
+        "Name": "Bulbasaur",
+        "Price": 15
+    },
+    {
+        "Id": 5,
+        "Name": "Treecko",
+        "Price": 15
+    },
+    {
+        "Id": 6,
+        "Name": "Pikachu",
+        "Price": 15
+    },
+    {
+        "Id": 7,
+        "Name": "Lucario",
+        "Price": 18
+    },
+    {
+        "Id": 8,
+        "Name": "Togekiss",
+        "Price": 20
+    },
+    {
+        "Id": 9,
+        "Name": "Blissey",
+        "Price": 21
+    },
+    {
+        "Id": 10,
+        "Name": "Shiny eevee",
+        "Price": 17
+    },
+    {
+        "Id": 11,
+        "Name": "Shiny gyarados",
+        "Price": 23
+    },
+    {
+        "Id": 12,
+        "Name": "Shiny ditto",
+        "Price": 17
+    }
+]
