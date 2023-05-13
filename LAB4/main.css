@@ -1,0 +1,166 @@
+html {
+    max-width: 1020px;
+    margin:0 auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 1020px;
+}
+/* 헤더 */
+.header {
+    color: #FFCC00;
+    text-shadow:
+    -1px -1px 0 #0075BE,
+    1px -1px 0 #0075BE,
+    -1px 1px 0 #0075BE,
+    1px 1px 0 #0075BE; 
+    text-align: center;
+    font-size: 40px;
+}
+.header h1 {
+    animation-duration: 2s;
+    animation-name: movingText;
+}
+@keyframes movingText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* 메뉴 */
+.menu {
+    width: 100%;
+    background-color: #0075BE;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.menu a {
+    width: 100px;
+    height: 100%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.menu a:hover {
+    background-color: #D5A100;
+    color: white;
+}
+/* 회원가입 */
+.signup {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #0075BE;
+}
+.signup-button {
+    padding: 5px 10px 5px 10px;
+    color: white;
+}
+.signup-submit {
+    background-color: #0075BE;
+}
+.signup-reset {
+    background-color: #D5A100;
+}
+
+/* 상품 */
+.itemlist {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+.items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.poke-img {
+    width: 150px;
+    transition: transform 2s;
+}
+.poke-img:hover {
+    transform: scale(2, 2);
+}
+.description {
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    margin-top: -50%;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.item:hover .description {
+    visibility: visible;
+    opacity: 1;
+}
+.item-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+}
+.item {
+    padding: 10px;
+    margin: 5px;
+    flex-shrink: 0;
+}
+/* 화면 조정 */
+@media screen and (max-width: 480px) {
+    .item-list {
+      flex-direction: column !important;
+    }
+    .menu {
+        flex-direction: column !important;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 800px) {
+    .item-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .items {
+        flex-basis: 40% !important;
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu a {
+        flex-basis: 40% !important;
+    }
+}
+@media screen and (min-width: 801px) {
+    .item-list {
+        flex-direction: row;
+    }
+    .menu {
+        flex-direction: row;
+    }
+}
