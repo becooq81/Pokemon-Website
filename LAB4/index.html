@@ -65,6 +65,7 @@
                                 <h4 class="onlyclicked" style="display:none" >${result.name}</h4>
                                 <img style="display: block;" src="${result.image}" width="150px">
                                 <p class="onlyclicked" style="display:none">${result.price}</p>
+                                <p class="onlyclicked" style="display:none">${result.description}</p>
                             </div>`
                     )
                     .join("");
@@ -102,10 +103,11 @@
                 let html = '';
     
                 pokemons.forEach(pokemon => {
-                    let htmlSegment = `<div class="pokemon">
+                    let htmlSegment = `<div width="150px" class="pokemon">
                             <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
                             <img style="display: block;" src="${pokemon.image}" width="150px">
                             <p class="onlyclicked" style="display:none">${pokemon.price}</p>
+                            <p class="onlyclicked" style="display:none">${pokemon.description}</p>
                         </div>`;
                     html += htmlSegment;
                 });
@@ -124,6 +126,7 @@
                             <h4 class="onlyclicked" style="display:none" >${result[0].name}</h4>
                             <img style="display: block;" src="${result[0].image}" width="150px">
                             <p class="onlyclicked" style="display:none">${result[0].price}</p>
+                            <p class="onlyclicked" style="display:none">${result[0].description}</p>
                         </div>`;
                 let container = document.querySelector('.products');
                 container.innerHTML = html;
@@ -141,6 +144,7 @@
                             <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
                             <img style="display: block;" src="${pokemon.image}" width="150px">
                             <p class="onlyclicked" style="display:none">${pokemon.price}</p>
+                            <p class="onlyclicked" style="display:none">${pokemon.description}</p>
                         </div>`;
                     html += htmlSegment;
                 });
@@ -176,6 +180,7 @@
                             <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
                             <img style="display: block;" src="${pokemon.image}" width="150px">
                             <p class="onlyclicked" style="display:none">${pokemon.price}</p>
+                            <p class="onlyclicked" style="display:none">${pokemon.description}</p>
                         </div>`;
                     html += htmlSegment;
                 });
@@ -211,8 +216,10 @@
             
             document.getElementById("clicked").addEventListener("click", function(e) {
                 console.log(e.target);
-                e.target.nextElementSibling.style.display="block";
-                e.target.previousElementSibling.style.display="block";
+                let v = e.target;
+                v.nextElementSibling.style.display="block";
+                v.previousElementSibling.style.display="block";
+                v.nextElementSibling.nextElementSibling.style.display="block";
             })
         </script>
     </body>

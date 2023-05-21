@@ -121,7 +121,7 @@ body {
     display: none;
 }
 .poke-img {
-    width: 150px;
+    max-width: 150px;
     transition: transform 2s;
 }
 .poke-img:hover {
