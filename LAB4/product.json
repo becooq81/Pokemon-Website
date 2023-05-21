@@ -1,62 +1,321 @@
 [
     {
-        "Id": 1,
-        "Name": "Tapu Koko",
-        "Price": 20
+        "name": "Mewtwo",
+        "region": "Kanto",
+        "image": "images/mewtwo.png",
+        "price": 25
     },
     {
-        "Id": 2,
-        "Name": "Kyogre",
-        "Price": 25
+        "name": "Dragonite",
+        "region": "Kanto",
+        "image": "images/dragonite.png",
+        "price": 25
     },
     {
-        "Id": 3,
-        "Name": "Rayqueza",
-        "Price": 26
+        "name": "Gyarados",
+        "region": "Kanto",
+        "image": "images/gyarados.png",
+        "price": 25
     },
     {
-        "Id": 4,
-        "Name": "Bulbasaur",
-        "Price": 15
+        "name": "Snorlax",
+        "region": "Kanto",
+        "image": "images/snorlax.png",
+        "price": 25
     },
     {
-        "Id": 5,
-        "Name": "Treecko",
-        "Price": 15
+        "name": "Charizard",
+        "region": "Kanto",
+        "image": "images/charizard.png",
+        "price": 25
     },
     {
-        "Id": 6,
-        "Name": "Pikachu",
-        "Price": 15
+        "name": "Alakazam",
+        "region": "Kanto",
+        "image": "images/alakazam.png",
+        "price": 25
     },
     {
-        "Id": 7,
-        "Name": "Lucario",
-        "Price": 18
+        "name": "Gengar",
+        "region": "Kanto",
+        "image": "images/gengar.png",
+        "price": 25
     },
     {
-        "Id": 8,
-        "Name": "Togekiss",
-        "Price": 20
+        "name": "Venusaur",
+        "region": "Kanto",
+        "image": "images/venusaur.webp",
+        "price": 25
     },
     {
-        "Id": 9,
-        "Name": "Blissey",
-        "Price": 21
+        "name": "Flareon",
+        "region": "Kanto",
+        "image": "images/flareon.png",
+        "price": 25
     },
     {
-        "Id": 10,
-        "Name": "Shiny eevee",
-        "Price": 17
+        "name": "Clefable",
+        "region": "Kanto",
+        "image": "images/clefable.png",
+        "price": 25
     },
     {
-        "Id": 11,
-        "Name": "Shiny gyarados",
-        "Price": 23
+        "name": "Lapras",
+        "region": "Kanto",
+        "image": "images/lapras.webp",
+        "price": 25
     },
     {
-        "Id": 12,
-        "Name": "Shiny ditto",
-        "Price": 17
+        "name": "Tauros",
+        "region": "Kanto",
+        "image": "images/tauros.png",
+        "price": 25
+    },
+    {
+        "name": "Raichu",
+        "region": "Kanto",
+        "image": "images/raichu.png",
+        "price": 25
+    },
+    {
+        "name": "Unown",
+        "region": "Johto",
+        "image": "images/unown.png",
+        "price": 5
+    },
+    {
+        "name": "Sundowoodo",
+        "region": "Johto",
+        "image": "images/sundowoodo.png",
+        "price": 15
+    },
+    {
+        "name": "Tyranitar",
+        "region": "Johto",
+        "image": "images/tyranitar.png",
+        "price": 25
+    },
+    {
+        "name": "Typhlosion",
+        "region": "Johto",
+        "image": "images/typhlosion.png",
+        "price": 25
+    },
+    {
+        "name": "Slowking",
+        "region": "Johto",
+        "image": "images/slowking.png",
+        "price": 20
+    },
+    {
+        "name": "Umbreon",
+        "region": "Johto",
+        "image": "images/umbreon.png",
+        "price": 23
+    },
+    {
+        "name": "Meganium",
+        "region": "Johto",
+        "image": "images/meganium.png",
+        "price": 24
+    },
+    {
+        "name": "Bellossom",
+        "region": "Johto",
+        "image": "images/bellossom.jpg",
+        "price": 22
+    },
+    {
+        "name": "Houndoom",
+        "region": "Johto",
+        "image": "images/houndoom.jpg",
+        "price": 22
+    },
+    {
+        "name": "Ampharos",
+        "region": "Johto",
+        "image": "images/ampharos.jpg",
+        "price": 21
+    },
+    {
+        "name": "Slaking",
+        "region": "Hoenn",
+        "image": "images/slaking.png",
+        "price": 25
+    },
+    {
+        "name": "Kyogre",
+        "region": "Hoenn",
+        "image": "images/kyogre.png",
+        "price": 30
+    },
+    {
+        "name": "Groudon",
+        "region": "Hoenn",
+        "image": "images/groudon.png",
+        "price": 30
+    },
+    {
+        "name": "Metagross",
+        "region": "Hoenn",
+        "image": "images/metagross.png",
+        "price": 26
+    },
+    {
+        "name": "Salamence",
+        "region": "Hoenn",
+        "image": "images/salamence.png",
+        "price": 26
+    },
+    {
+        "name": "Rayquaza",
+        "region": "Hoenn",
+        "image": "images/rayquaza.png",
+        "price": 30
+    },
+    {
+        "name": "Latios",
+        "region": "Hoenn",
+        "image": "images/latios.png",
+        "price": 30
+    },
+    {
+        "name": "Latias",
+        "region": "Hoenn",
+        "image": "images/latias.jpg",
+        "price": 30
+    },
+    {
+        "name": "Breloom",
+        "region": "Hoenn",
+        "image": "images/breloom.png",
+        "price": 25
+    },
+    {
+        "name": "Banette",
+        "region": "Hoenn",
+        "image": "images/banette.png",
+        "price": 25
+    },
+    {
+        "name": "Hariyama",
+        "region": "Hoenn",
+        "image": "images/hariyama.jpg",
+        "price": 25
+    },
+    {
+        "name": "Absol",
+        "region": "Hoenn",
+        "image": "images/absol.png",
+        "price": 25
+    },
+    {
+        "name": "Regice",
+        "region": "Hoenn",
+        "image": "images/regice.jpg",
+        "price": 27
+    },
+    {
+        "name": "Altaria",
+        "region": "Hoenn",
+        "image": "images/altaria.png",
+        "price": 25
+    },
+    {
+        "name": "Regirock",
+        "region": "Hoenn",
+        "image": "images/regirock.jpg",
+        "price": 27
+    },
+    {
+        "name": "Sceptile",
+        "region": "Hoenn",
+        "image": "images/sceptile.png",
+        "price": 25
+    },
+    {
+        "name": "Seviper",
+        "region": "Hoenn",
+        "image": "images/seviper.jpg",
+        "price": 25
+    },
+    {
+        "name": "Registeel",
+        "region": "Hoenn",
+        "image": "images/registeel.jpg",
+        "price": 25
+    },
+    {
+        "name": "Giratina",
+        "region": "Sinnoh",
+        "image": "images/giratina.png",
+        "price": 30
+    },
+    {
+        "name": "Toxicroak",
+        "region": "Sinnoh",
+        "image": "images/toxicroak.jpg",
+        "price": 25
+    },
+    {
+        "name": "Abomasnow",
+        "region": "Sinnoh",
+        "image": "images/abomasnow.png",
+        "price": 25
+    },
+    {
+        "name": "Staraptor",
+        "region": "Sinnoh",
+        "image": "images/staraptor.png",
+        "price": 25
+    },
+    {
+        "name": "Gallade",
+        "region": "Sinnoh",
+        "image": "images/gallade.png",
+        "price": 25
+    },
+    {
+        "name": "Purugly",
+        "region": "Sinnoh",
+        "image": "images/purugly.jpg",
+        "price": 22
+    },
+    {
+        "name": "Magnezone",
+        "region": "Sinnoh",
+        "image": "images/magnezone.png",
+        "price": 25
+    },
+    {
+        "name": "Torterra",
+        "region": "Sinnoh",
+        "image": "images/torterra.jpg",
+        "price": 25
+    },
+    {
+        "name": "Dialga",
+        "region": "Sinnoh",
+        "image": "images/dialga.png",
+        "price": 30
+    },
+    {
+        "name": "Palkia",
+        "region": "Sinnoh",
+        "image": "images/palkia.jpg",
+        "price": 30
+    },
+    {
+        "name": "Infernape",
+        "region": "Sinnoh",
+        "image": "images/infernape.png",
+        "price": 25
+    },
+    {
+        "name": "Roserade",
+        "region": "Sinnoh",
+        "image": "images/roserade.jpeg",
+        "price": 25
     }
+
 ]

@@ -1,8 +1,95 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
+        <script>
+            /**
+            function makeRequest() {
+                let url = './product.json';
+                let myForm = document.getElementById('myForm');
+                let params = new FormData(myForm);
+                fetch(url, {method: "GET", body: params})
+                .then((response) => {
+                    return response.json()
+                })
+                .then(data => console.log(data))
+                .catch(function(error) {
+                    console.log(error);
+                });
+            }
+            makeRequest();
+            
+            
+            function show(data) {
+                let tab = 
+                    `<tr>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Region</th>
+                        <th>Price</th>
+                    </tr>`;
+                data.forEach(pokemon => {
+                    tab += `<tr>
+                        <td>${r.name} </td>
+                        <td>${r.image} </td>
+                        <td>${r.region} </td>
+                        <td>${r.price} </td>
+                    </tr>`;
+                });
+                document.getElementById("pokemons").innerHTML = tab;
+            }**/
+            async function getPokemons() {
+                let url = 'product.json';
+                try {
+                    let res = await fetch(url);
+                    return await res.json();
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+            async function renderPokemons() {
+                let pokemons = await getPokemons();
+                let html = '';
+                pokemons.forEach(pokemon => {
+                    let htmlSegment = `<div class="pokemon">
+                            <h4>${pokemon.name}</h4>
+                            <img src="${pokemon.image}" width="150px">
+                            <p>${pokemon.price}</p>
+                        </div>`;
+                    html += htmlSegment;
+                });
+
+                let container = document.querySelector('.products');
+                container.innerHTML = html;
+            }
+            renderPokemons();
+            function search() {
+                let url = 'product.json';
+                fetch(url, {
+                    method: "GET",
+                    mode: "cors",
+                    credentials: "same-origin"
+                })
+            }
+            async function filter(data) {
+                let html = '';
+                if (region == "All") {
+                    return data;
+                }
+                for (let pokemon in pokemons) {
+                    if (region == pokemon.region) {
+                        let htmlSegment = `<div class="pokemon">
+                            <h4>${pokemon.name}</h4>
+                            <img src="${pokemon.image}" width="150px">
+                            <p>${pokemon.price}</p>
+                        </div>`;
+                    html += htmlSegment;
+                    }
+                }
+            }
+            filter();
+        </script>
         <meta charset="utf-8">
-        <title>Log in</title>
+        <title>Main</title>
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
@@ -13,6 +100,30 @@
             <a href="index.html">메인</a>
             <a href="login.html">로그인</a>
             <a href="signup.html">회원가입</a>
+        </div>
+        <div class="content">
+            <div class="search">
+                <form action="" id="myForm">
+                    Choose a region:
+                    <select name="region" id="region">
+                        <option value="All">All</option>
+                        <option value="Kanto">Kanto</option>
+                        <option value="Johto">Johto</option>
+                        <option value="Hoenn">Hoenn</option>
+                        <option value="Sinnoh">Sinnoh</option>
+                    </select><br>
+                    Enter a search term:
+                    <input name="term" type="text" size="20" id="term"><br>
+                    Choose a sort:
+                    <select name="sort" id="sort">
+                        <option value="">Alphabetical order</option>
+                        <option value="">Cheapest to costliest</option>
+                    </select><br>
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="products">
+            </div>
         </div>
     </body>
 </html>

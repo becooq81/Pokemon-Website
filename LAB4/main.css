@@ -80,6 +80,26 @@ body {
 }
 
 /* 상품 */
+.content {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+}
+
+.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 2%;
+    margin-top: -20px;
+}
+.search {
+    display: flex;
+    size: 13px;
+}
+#myForm {
+    line-height: 2em;
+}
 .itemlist {
     width: 100%;
     display: flex;
