@@ -50,11 +50,11 @@
                 fetch("product.json")
                 .then((response) => response.json())
                 .then((data) =>
-                    drawCard(data.slice(skip * take, take * (page + 1)), data.length)
+                    addMore(data.slice(skip * take, take * (page + 1)), data.length)
                 );
             }
     
-            function drawCard(results, length) {
+            function addMore(results, length) {
                 total = length;
                 const html = results
                     .map(
@@ -73,7 +73,7 @@
             document.addEventListener("DOMContentLoaded", getData(0, 20));
             window.addEventListener("scroll", () => {
             if (document.documentElement.scrollTop + document.documentElement.clientHeight >=document.documentElement.scrollHeight) {
-                if (page + 1 < total / limit) {
+                if (page + 1 < total /limit) {
                     page++;
                     loader.classList.remove("hidden");
                     setTimeout(() => {
