@@ -117,7 +117,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
 }
-.onlyclicked {
+.pokemon {
     display: none;
 }
 .poke-img {

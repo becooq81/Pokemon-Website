@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="ko">
-    <head>
+<!-- saved from url=(0064)http://127.0.0.1:5501/LAB4/index.html?region=All&term=&sort=none -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <meta charset="utf-8">
+        
         <title>Main</title>
-        <link rel="stylesheet" type="text/css" href="main.css">
-    </head>
+        
+    <link rel="stylesheet" type="text/css" href="./Main_files/main.css"></head>
     <body>
         <div class="header">
             <h1>Welcome to Poke Shop!</h1>
         </div>
         <div class="menu">
-            <a href="index.html">메인</a>
-            <a href="login.html">로그인</a>
-            <a href="signup.html">회원가입</a>
+            <a href="http://127.0.0.1:5501/LAB4/index.html">메인</a>
+            <a href="http://127.0.0.1:5501/LAB4/login.html">로그인</a>
+            <a href="http://127.0.0.1:5501/LAB4/signup.html">회원가입</a>
         </div>
         <div class="content">
             <div class="search">
-                <form action="" id="myForm" onsubmit="makeRequest()">
+                <form action="http://127.0.0.1:5501/LAB4/index.html?region=All&amp;term=&amp;sort=none" id="myForm" onsubmit="makeRequest()">
                     Choose a region:
                     <select name="region" id="region">
                         <option value="All">All</option>
@@ -37,10 +37,48 @@
                     <button type="submit">Submit</button>
                 </form>
             </div>
-            <div class="products" id="clicked"></div>
+            <div class="products"></div>
             <div class="loading-container"></div>
         </div>
-    </body>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
     <script>
         /**
         function makeRequest() {
@@ -102,9 +140,9 @@
 
             pokemons.forEach(pokemon => {
                 let htmlSegment = `<div class="pokemon">
-                        <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
-                        <img style="display: block;" src="${pokemon.image}" width="150px">
-                        <p class="onlyclicked" style="display:none">${pokemon.price}</p>
+                        <h4 id="onlyclicked" >${pokemon.name}</h4>
+                        <img onclick="display()" style="display: block;" src="${pokemon.image}" width="150px">
+                        <p id="onlyclicked" >${pokemon.price}</p>
                     </div>`;
                 html += htmlSegment;
             });
@@ -147,11 +185,13 @@
 
         var item = document.querySelector(".pokemon");
         
-        document.getElementById("clicked").addEventListener("click", function(e) {
-            console.log(e.target);
-            e.target.nextElementSibling.style.display="block";
-            e.target.previousElementSibling.style.display="block";
-        })
+        var pokemonlist = document.getElementsByClassName("pokemon");
+        console.log(pokemonlist);
+        for (var i = 0; i < pokemonlist.length; i++) {
+            pokemonlist[i].onclick = function() {
+                pokemonlist[i].style.
+            }
+        }
 
     </script>
-</html>
+</body></html>

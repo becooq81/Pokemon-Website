@@ -128,13 +128,13 @@
     {
         "name": "Houndoom",
         "region": "Johto",
-        "image": "images/houndoom.jpg",
+        "image": "images/houndoom.png",
         "price": 22
     },
     {
         "name": "Ampharos",
         "region": "Johto",
-        "image": "images/ampharos.jpg",
+        "image": "images/ampharos.png",
         "price": 21
     },
     {
