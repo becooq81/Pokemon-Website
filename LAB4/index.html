@@ -20,7 +20,7 @@
                 <form action="" id="myForm">
                     Choose a region:
                     <select name="region" id="region">
-                        <option value="All">All</option>
+                        <option value="">All</option>
                         <option value="Kanto">Kanto</option>
                         <option value="Johto">Johto</option>
                         <option value="Hoenn">Hoenn</option>
@@ -30,9 +30,9 @@
                     <input name="term" type="text" size="20" id="term"><br>
                     Choose a sort:
                     <select name="sort" id="sort">
-                        <option value="none">None</option>
-                        <option value="">Alphabetical order</option>
-                        <option value="">Cheapest to costliest</option>
+                        <option value="">None</option>
+                        <option value="Alphabet">Alphabetical order</option>
+                        <option value="Price">Cheapest to costliest</option>
                     </select><br>
                     <button type="submit" value="Submit">Submit</button>
                 </form>
@@ -116,14 +116,18 @@
             console.log(sort);
             let pokemons = await getPokemons();
             html = ''            
-            console.log(pokemons);
             
-            pokemons.sort(function(a, b) {
+            if (sort == "Alphabet") {
+                pokemons.sort(function(a, b) {
                 a = a.name.toLowerCase();
                 b = b.name.toLowerCase();
 
                 return a < b ? -1 : a > b ? 1 : 0;
-            });
+            });}
+
+            else if (sort == "Price") {
+                pokemons.sort((a, b) => Number(a.price)-Number(b.price));
+            }
 
             pokemons.forEach(pokemon => {
                 let htmlSegment = `<div class="pokemon">
@@ -138,15 +142,22 @@
         }
 
         document.getElementById('myForm').addEventListener('submit', (e) => {
-            if (document.getElementById('term').value.length !== 0) {
+            let term = document.getElementById('term').value;
+            let sort = document.getElementById('sort').value;
+            let region = document.getElementById('region').value;
+
+            if (term.length == 0 && sort.length == 0 && region.length == 0) {
+                renderPokemons();
+                return;
+            }
+            if (term.length !== 0) {
                 getByKeyword();
             }
-            else if (document.getElementById('region').value.length !== 0) {
-                filterByRegion();
-            }
-            else if (document.getElementById('sort').value.length !== 0) {
-                console.log("hi");
+            if (sort.length !== 0) {
                 sortByStandard();
+            }
+            if (region.length !== 0) {
+                filterByRegion();
             }
         });
 
