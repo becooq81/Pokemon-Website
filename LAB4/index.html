@@ -17,7 +17,7 @@
         </div>
         <div class="content">
             <div class="search">
-                <form action="" id="myForm" onsubmit="makeRequest()">
+                <form action="" id="myForm">
                     Choose a region:
                     <select name="region" id="region">
                         <option value="All">All</option>
@@ -34,7 +34,7 @@
                         <option value="">Alphabetical order</option>
                         <option value="">Cheapest to costliest</option>
                     </select><br>
-                    <button type="submit">Submit</button>
+                    <button type="submit" value="Submit">Submit</button>
                 </form>
             </div>
             <div class="products" id="clicked"></div>
@@ -42,42 +42,7 @@
         </div>
     </body>
     <script>
-        /**
-        function makeRequest() {
-            let url = './product.json';
-            let myForm = document.getElementById('myForm');
-            let params = new FormData(myForm);
-            fetch(url, {method: "GET", body: params})
-            .then((response) => {
-                return response.json()
-            })
-            .then(data => console.log(data))
-            .catch(function(error) {
-                console.log(error);
-            });
-        }
-        makeRequest();
         
-        
-        function show(data) {
-            let tab = 
-                `<tr>
-                    <th>Name</th>
-                    <th>Image</th>
-                    <th>Region</th>
-                    <th>Price</th>
-                </tr>`;
-            data.forEach(pokemon => {
-                tab += `<tr>
-                    <td>${r.name} </td>
-                    <td>${r.image} </td>
-                    <td>${r.region} </td>
-                    <td>${r.price} </td>
-                </tr>`;
-            });
-            document.getElementById("pokemons").innerHTML = tab;
-        }**/
-
         var pokemons = getPokemons();
 
         async function getPokemons() {
@@ -93,13 +58,6 @@
             let pokemons = await getPokemons();
             let html = '';
 
-            var formEl = document.getElementById('myForm');
-            var formData = new FormData(formEl);
-
-            var region = formData.get('region');
-
-            var filtered = pokemons.filter(value => value.region == region);
-
             pokemons.forEach(pokemon => {
                 let htmlSegment = `<div class="pokemon">
                         <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
@@ -114,24 +72,83 @@
         }
         renderPokemons();
         
-        async function makeRequest() {
-            let url = 'product.json';
-            let myForm = document.getElementById('myForm');
-            let params = new FormData(myForm);
+        const getByKeyword = async() => {
+            let keyword = document.getElementById("term").value;
+            let pokemons = await getPokemons();
+            html = ''
+            let result = pokemons.filter((obj) => obj["name"] === keyword);
+            console.log(result[0]);
+            html += `<div class="pokemon">
+                        <h4 class="onlyclicked" style="display:none" >${result[0].name}</h4>
+                        <img style="display: block;" src="${result[0].image}" width="150px">
+                        <p class="onlyclicked" style="display:none">${result[0].price}</p>
+                    </div>`;
+            let container = document.querySelector('.products');
+            container.innerHTML = html;
+            
+        }
 
-            console.log(params);
+        const filterByRegion = async() => {
+            let region = document.getElementById("region").value;
+            let pokemons = await getPokemons();
+            html = ''
+            let result = pokemons.filter((obj) => obj["region"] === region);
 
-            fetch(url)
-            .then((response) => response.json)
-            .then((data) => processData(data, params))
-            .catch(function(error) {
-                console.log(error);
+            result.forEach(pokemon => {
+                let htmlSegment = `<div class="pokemon">
+                        <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
+                        <img style="display: block;" src="${pokemon.image}" width="150px">
+                        <p class="onlyclicked" style="display:none">${pokemon.price}</p>
+                    </div>`;
+                html += htmlSegment;
             });
-            
+
+            if (region == "All") {
+                renderPokemons();
+            }
+
+            let container = document.querySelector('.products');
+            container.innerHTML = html;
         }
-        async function processData(data, params) {
+        
+        const sortByStandard = async() => {
+            let sort = document.getElementById("sort").value;
+            console.log(sort);
+            let pokemons = await getPokemons();
+            html = ''            
+            console.log(pokemons);
             
+            pokemons.sort(function(a, b) {
+                a = a.name.toLowerCase();
+                b = b.name.toLowerCase();
+
+                return a < b ? -1 : a > b ? 1 : 0;
+            });
+
+            pokemons.forEach(pokemon => {
+                let htmlSegment = `<div class="pokemon">
+                        <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
+                        <img style="display: block;" src="${pokemon.image}" width="150px">
+                        <p class="onlyclicked" style="display:none">${pokemon.price}</p>
+                    </div>`;
+                html += htmlSegment;
+            });
+            let container = document.querySelector('.products');
+            container.innerHTML = html;
         }
+
+        document.getElementById('myForm').addEventListener('submit', (e) => {
+            if (document.getElementById('term').value.length !== 0) {
+                getByKeyword();
+            }
+            else if (document.getElementById('region').value.length !== 0) {
+                filterByRegion();
+            }
+            else if (document.getElementById('sort').value.length !== 0) {
+                console.log("hi");
+                sortByStandard();
+            }
+        });
 
         document.querySelector("#myForm").addEventListener("submit", norefresh);
         function norefresh() {
@@ -140,18 +157,18 @@
 
         var body = document.querySelector("body");
         body.onscroll = function () {
-            if (window.scrollY > (document.body.offsetHeight - window.outerHeight)) {
+            if (window.innerHeight +window.scrollY >= document.body.off) {
                 body.style.height = document.body.offsetHeight +200 +"px";
             }
         }
-
-        var item = document.querySelector(".pokemon");
         
         document.getElementById("clicked").addEventListener("click", function(e) {
             console.log(e.target);
             e.target.nextElementSibling.style.display="block";
             e.target.previousElementSibling.style.display="block";
         })
+
+
 
     </script>
 </html>

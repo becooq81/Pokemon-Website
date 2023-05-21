@@ -94,7 +94,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     padding-left: 2%;
-    margin-top: -20px;
     overflow-y: scroll;
 }
 .search {

@@ -316,6 +316,259 @@
         "region": "Sinnoh",
         "image": "images/roserade.jpeg",
         "price": 25
+    },
+    {
+        "name": "Roserade",
+        "region": "Sinnoh",
+        "image": "images/roserade.jpeg",
+        "price": 25
+    },
+    {
+        "name": "Shinx",
+        "region": "Sinnoh",
+        "image": "images/Shinx.png",
+        "price": 10
+    },
+    {
+        "name": "Shaymin",
+        "region": "Sinnoh",
+        "image": "images/Shaymin.png",
+        "price": 10
+    },
+    {
+        "name": "Skorupi",
+        "region": "Sinnoh",
+        "image": "images/skorupi.jpg",
+        "price": 10
+    },
+    {
+        "name": "Cherrim",
+        "region": "Sinnoh",
+        "image": "images/Cherrim.webp",
+        "price": 10
+    },
+    {
+        "name": "Mothim",
+        "region": "Sinnoh",
+        "image": "images/Mothim.png",
+        "price": 10
+    },
+    {
+        "name": "Shieldon",
+        "region": "Sinnoh",
+        "image": "images/shieldon.png",
+        "price": 10
+    },
+    {
+        "name": "Happiny",
+        "region": "Sinnoh",
+        "image": "images/Happiny.png",
+        "price": 10
+    },
+    {
+        "name": "Lickitung",
+        "region": "Sinnoh",
+        "image": "images/Lickitung.jpg",
+        "price": 10
+    },
+    {
+        "name": "Piplup",
+        "region": "Sinnoh",
+        "image": "images/piplup.png",
+        "price": 10
+    },
+    {
+        "name": "Gastrodon",
+        "region": "Sinnoh",
+        "image": "images/Gastrodon.png",
+        "price": 10
+    },
+    {
+        "name": "Stunky",
+        "region": "Sinnoh",
+        "image": "images/stunky.png",
+        "price": 10
+    },
+    {
+        "name": "Gastrodon",
+        "region": "Hoenn",
+        "image": "images/Gastrodon.png",
+        "price": 10
+    },
+    {
+        "name": "Clamperl",
+        "region": "Hoenn",
+        "image": "images/Clamperl.png",
+        "price": 10
+    },
+    {
+        "name": "Loudred",
+        "region": "Hoenn",
+        "image": "images/Loudred.jpg",
+        "price": 10
+    },
+    {
+        "name": "Milotic",
+        "region": "Hoenn",
+        "image": "images/Milotic.png",
+        "price": 10
+    },
+    {
+        "name": "Bagon",
+        "region": "Hoenn",
+        "image": "images/Bagon.png",
+        "price": 10
+    },
+    {
+        "name": "Spheal",
+        "region": "Hoenn",
+        "image": "images/Spheal.png",
+        "price": 10
+    },
+    {
+        "name": "Mawile",
+        "region": "Hoenn",
+        "image": "images/Mawile.png",
+        "price": 17
+    },
+    {
+        "name": "Mudkip",
+        "region": "Hoenn",
+        "image": "images/Mudkip.png",
+        "price": 10
+    },
+    {
+        "name": "Shuppet",
+        "region": "Hoenn",
+        "image": "images/Shuppet.png",
+        "price": 10
+    },
+    {
+        "name": "Lunatone",
+        "region": "Hoenn",
+        "image": "images/Lunatone.png",
+        "price": 10
+    },
+    {
+        "name": "Dustox",
+        "region": "Hoenn",
+        "image": "images/Dustox.png",
+        "price": 10
+    },
+    {
+        "name": "Beautifly",
+        "region": "Hoenn",
+        "image": "images/Beautifly.png",
+        "price": 10
+    },
+    {
+        "name": "Manectric",
+        "region": "Hoenn",
+        "image": "images/Manectric.jpg",
+        "price": 15
+    },
+    {
+        "name": "Shiftry",
+        "region": "Hoenn",
+        "image": "images/Shiftry.jpg",
+        "price": 10
+    },
+    {
+        "name": "Sunflora",
+        "region": "Johto",
+        "image": "images/Sunflora.png",
+        "price": 15
+    },
+    {
+        "name": "Steelix",
+        "region": "Johto",
+        "image": "images/Steelix.png",
+        "price": 15
+    },
+    {
+        "name": "Dunsparce",
+        "region": "Johto",
+        "image": "images/Dunsparce.png",
+        "price": 15
+    },
+    {
+        "name": "Feraligatr",
+        "region": "Johto",
+        "image": "images/Feraligatr.png",
+        "price": 15
+    },
+    {
+        "name": "Granbull",
+        "region": "Johto",
+        "image": "images/Granbull.png",
+        "price": 15
+    },
+    {
+        "name": "Scizor",
+        "region": "Johto",
+        "image": "images/Scizor.jpg",
+        "price": 15
+    },
+    {
+        "name": "Crobat",
+        "region": "Johto",
+        "image": "images/Crobat.png",
+        "price": 15
+    },
+    {
+        "name": "Suicune",
+        "region": "Johto",
+        "image": "images/suicune.jpg",
+        "price": 15
+    },
+    {
+        "name": "Donphan",
+        "region": "Johto",
+        "image": "images/Donphan.png",
+        "price": 15
+    },
+    {
+        "name": "Delibird",
+        "region": "Johto",
+        "image": "images/Delibird.jpg",
+        "price": 15
+    },
+    {
+        "name": "Jumpluff",
+        "region": "Johto",
+        "image": "images/Jumpluff.png",
+        "price": 15
+    },
+    {
+        "name": "Sneasel",
+        "region": "Johto",
+        "image": "images/Sneasel.png",
+        "price": 15
+    },
+    {
+        "name": "Totodile",
+        "region": "Johto",
+        "image": "images/Totodile.png",
+        "price": 7
+    },
+    {
+        "name": "Pichu",
+        "region": "Johto",
+        "image": "images/Pichu.png",
+        "price": 7
+    },
+    {
+        "name": "Phanpy",
+        "region": "Johto",
+        "image": "images/Phanpy.png",
+        "price": 8
+    },
+    {
+        "name": "Lugia",
+        "region": "Johto",
+        "image": "images/Lugia.png",
+        "price": 30
     }
+    
 
 ]
