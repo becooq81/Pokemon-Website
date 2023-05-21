@@ -100,7 +100,6 @@ body {
 }
 .search {
     display: flex;
-    size: 13px;
 }
 #myForm {
     line-height: 2em;

@@ -40,182 +40,181 @@
             </div>
             <div class="products" id="clicked"></div>
         </div>
-        <div class="loader container">Loading...</div>
+        <div class="loader container"></div>
+        <script>
+            let page = 0;
+            let limit = 20;
+            let total;
+            const container = document.querySelector(".products");
+            const loader = document.querySelector(".loader");
+    
+            function getData(skip, take) {
+                fetch("product.json")
+                .then((response) => response.json())
+                .then((data) =>
+                    drawCard(data.slice(skip * take, take * (page + 1)), data.length)
+                );
+            }
+    
+            function drawCard(results, length) {
+                total = length;
+                const html = results
+                    .map(
+                    (result) =>
+                        `<div class="pokemon">
+                                <h4 class="onlyclicked" style="display:none" >${result.name}</h4>
+                                <img style="display: block;" src="${result.image}" width="150px">
+                                <p class="onlyclicked" style="display:none">${result.price}</p>
+                            </div>`
+                    )
+                    .join("");
+                container.innerHTML += html;
+            }
+    
+            document.addEventListener("DOMContentLoaded", getData(0, 20));
+            window.addEventListener("scroll", () => {
+            if (document.documentElement.scrollTop + document.documentElement.clientHeight >=document.documentElement.scrollHeight) {
+                if (page + 1 < total / limit) {
+                    page++;
+                    loader.classList.remove("hidden");
+                    setTimeout(() => {
+                        loader.classList.add("hidden");
+                        getData(page, limit);
+                    }, 50);
+                } else {
+                    return;
+                }
+            }
+            });
+    
+    
+            async function getPokemons() {
+                let url = 'product.json';
+                try {
+                    let res = await fetch(url);
+                    return await res.json();
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+            async function renderPokemons() {
+                let pokemons = await getPokemons();
+                let html = '';
+    
+                pokemons.forEach(pokemon => {
+                    let htmlSegment = `<div class="pokemon">
+                            <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
+                            <img style="display: block;" src="${pokemon.image}" width="150px">
+                            <p class="onlyclicked" style="display:none">${pokemon.price}</p>
+                        </div>`;
+                    html += htmlSegment;
+                });
+    
+                let container = document.querySelector('.products');
+                container.innerHTML = html;
+            }
+            
+            const getByKeyword = async() => {
+                let keyword = document.getElementById("term").value;
+                let pokemons = await getPokemons();
+                html = ''
+                let result = pokemons.filter((obj) => obj["name"] === keyword);
+                console.log(result[0]);
+                html += `<div class="pokemon">
+                            <h4 class="onlyclicked" style="display:none" >${result[0].name}</h4>
+                            <img style="display: block;" src="${result[0].image}" width="150px">
+                            <p class="onlyclicked" style="display:none">${result[0].price}</p>
+                        </div>`;
+                let container = document.querySelector('.products');
+                container.innerHTML = html;
+                
+            }
+    
+            const filterByRegion = async() => {
+                let region = document.getElementById("region").value;
+                let pokemons = await getPokemons();
+                html = ''
+                let result = pokemons.filter((obj) => obj["region"] === region);
+    
+                result.forEach(pokemon => {
+                    let htmlSegment = `<div class="pokemon">
+                            <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
+                            <img style="display: block;" src="${pokemon.image}" width="150px">
+                            <p class="onlyclicked" style="display:none">${pokemon.price}</p>
+                        </div>`;
+                    html += htmlSegment;
+                });
+    
+                if (region == "All") {
+                    renderPokemons();
+                }
+    
+                let container = document.querySelector('.products');
+                container.innerHTML = html;
+            }
+            
+            const sortByStandard = async() => {
+                let sort = document.getElementById("sort").value;
+                console.log(sort);
+                let pokemons = await getPokemons();
+                html = ''            
+                
+                if (sort == "Alphabet") {
+                    pokemons.sort(function(a, b) {
+                    a = a.name.toLowerCase();
+                    b = b.name.toLowerCase();
+    
+                    return a < b ? -1 : a > b ? 1 : 0;
+                });}
+    
+                else if (sort == "Price") {
+                    pokemons.sort((a, b) => Number(a.price)-Number(b.price));
+                }
+    
+                pokemons.forEach(pokemon => {
+                    let htmlSegment = `<div class="pokemon">
+                            <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
+                            <img style="display: block;" src="${pokemon.image}" width="150px">
+                            <p class="onlyclicked" style="display:none">${pokemon.price}</p>
+                        </div>`;
+                    html += htmlSegment;
+                });
+                let container = document.querySelector('.products');
+                container.innerHTML = html;
+            }
+    
+            document.getElementById('myForm').addEventListener('submit', (e) => {
+                event.preventDefault();
+    
+                let term = document.getElementById('term').value;
+                let sort = document.getElementById('sort').value;
+                let region = document.getElementById('region').value;
+    
+                if (term.length == 0 && sort.length == 0 && region.length == 0) {
+                    renderPokemons();
+                    return;
+                }
+                if (term.length !== 0) {
+                    getByKeyword();
+                }
+                if (sort.length !== 0) {
+                    sortByStandard();
+                }
+                if (region.length !== 0) {
+                    filterByRegion();
+                }
+    
+                document.getElementById('term').value ="";
+                document.getElementById('sort').value="";
+                document.getElementById('region').value="";
+            });
+            
+            document.getElementById("clicked").addEventListener("click", function(e) {
+                console.log(e.target);
+                e.target.nextElementSibling.style.display="block";
+                e.target.previousElementSibling.style.display="block";
+            })
+        </script>
     </body>
-    <script>
-        let page = 0;
-        let limit = 20;
-        let total;
-        const container = document.querySelector(".products");
-        const loader = document.querySelector(".loader");
-
-        function getData(skip, take) {
-            fetch("product.json")
-            .then((response) => response.json())
-            .then((data) =>
-                drawCard(data.slice(skip * take, take * (page + 1)), data.length)
-            );
-        }
-
-        function drawCard(results, length) {
-            total = length;
-            const html = results
-                .map(
-                (result) =>
-                    `<div class="pokemon">
-                            <h4 class="onlyclicked" style="display:none" >${result.name}</h4>
-                            <img style="display: block;" src="${result.image}" width="150px">
-                            <p class="onlyclicked" style="display:none">${result.price}</p>
-                        </div>`
-                )
-                .join("");
-            container.innerHTML += html;
-        }
-
-        document.addEventListener("DOMContentLoaded", getData(0, 20));
-        window.addEventListener("scroll", () => {
-        if (document.documentElement.scrollTop + document.documentElement.clientHeight >=document.documentElement.scrollHeight) {
-            if (page + 1 < total / limit) {
-                page++;
-                loader.classList.remove("hidden");
-                setTimeout(() => {
-                    loader.classList.add("hidden");
-                    getData(page, limit);
-                }, 50);
-            } else {
-                return;
-            }
-        }
-        });
-
-
-        async function getPokemons() {
-            let url = 'product.json';
-            try {
-                let res = await fetch(url);
-                return await res.json();
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        async function renderPokemons() {
-            let pokemons = await getPokemons();
-            let html = '';
-
-            pokemons.forEach(pokemon => {
-                let htmlSegment = `<div class="pokemon">
-                        <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
-                        <img style="display: block;" src="${pokemon.image}" width="150px">
-                        <p class="onlyclicked" style="display:none">${pokemon.price}</p>
-                    </div>`;
-                html += htmlSegment;
-            });
-
-            let container = document.querySelector('.products');
-            container.innerHTML = html;
-        }
-        
-        const getByKeyword = async() => {
-            let keyword = document.getElementById("term").value;
-            let pokemons = await getPokemons();
-            html = ''
-            let result = pokemons.filter((obj) => obj["name"] === keyword);
-            console.log(result[0]);
-            html += `<div class="pokemon">
-                        <h4 class="onlyclicked" style="display:none" >${result[0].name}</h4>
-                        <img style="display: block;" src="${result[0].image}" width="150px">
-                        <p class="onlyclicked" style="display:none">${result[0].price}</p>
-                    </div>`;
-            let container = document.querySelector('.products');
-            container.innerHTML = html;
-            
-        }
-
-        const filterByRegion = async() => {
-            let region = document.getElementById("region").value;
-            let pokemons = await getPokemons();
-            html = ''
-            let result = pokemons.filter((obj) => obj["region"] === region);
-
-            result.forEach(pokemon => {
-                let htmlSegment = `<div class="pokemon">
-                        <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
-                        <img style="display: block;" src="${pokemon.image}" width="150px">
-                        <p class="onlyclicked" style="display:none">${pokemon.price}</p>
-                    </div>`;
-                html += htmlSegment;
-            });
-
-            if (region == "All") {
-                renderPokemons();
-            }
-
-            let container = document.querySelector('.products');
-            container.innerHTML = html;
-        }
-        
-        const sortByStandard = async() => {
-            let sort = document.getElementById("sort").value;
-            console.log(sort);
-            let pokemons = await getPokemons();
-            html = ''            
-            
-            if (sort == "Alphabet") {
-                pokemons.sort(function(a, b) {
-                a = a.name.toLowerCase();
-                b = b.name.toLowerCase();
-
-                return a < b ? -1 : a > b ? 1 : 0;
-            });}
-
-            else if (sort == "Price") {
-                pokemons.sort((a, b) => Number(a.price)-Number(b.price));
-            }
-
-            pokemons.forEach(pokemon => {
-                let htmlSegment = `<div class="pokemon">
-                        <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
-                        <img style="display: block;" src="${pokemon.image}" width="150px">
-                        <p class="onlyclicked" style="display:none">${pokemon.price}</p>
-                    </div>`;
-                html += htmlSegment;
-            });
-            let container = document.querySelector('.products');
-            container.innerHTML = html;
-        }
-
-        document.getElementById('myForm').addEventListener('submit', (e) => {
-            let term = document.getElementById('term').value;
-            let sort = document.getElementById('sort').value;
-            let region = document.getElementById('region').value;
-
-            if (term.length == 0 && sort.length == 0 && region.length == 0) {
-                renderPokemons();
-                return;
-            }
-            if (term.length !== 0) {
-                getByKeyword();
-            }
-            if (sort.length !== 0) {
-                sortByStandard();
-            }
-            if (region.length !== 0) {
-                filterByRegion();
-            }
-        });
-
-        document.querySelector("#myForm").addEventListener("submit", norefresh);
-        function norefresh() {
-            event.preventDefault();
-        }
-        
-        document.getElementById("clicked").addEventListener("click", function(e) {
-            console.log(e.target);
-            e.target.nextElementSibling.style.display="block";
-            e.target.previousElementSibling.style.display="block";
-        })
-
-
-
-    </script>
+    
 </html>
