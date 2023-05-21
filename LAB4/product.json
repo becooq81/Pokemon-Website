@@ -318,12 +318,6 @@
         "price": 25
     },
     {
-        "name": "Roserade",
-        "region": "Sinnoh",
-        "image": "images/roserade.jpeg",
-        "price": 25
-    },
-    {
         "name": "Shinx",
         "region": "Sinnoh",
         "image": "images/Shinx.png",
