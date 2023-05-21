@@ -64,7 +64,7 @@
                         `<div class="pokemon">
                                 <h4 class="onlyclicked" style="display:none" >${result.name}</h4>
                                 <img style="display: block;" src="${result.image}" width="150px">
-                                <p class="onlyclicked" style="display:none">${result.price}</p>
+                                <p class="onlyclicked" style="display:none">Price: $ ${result.price}</p>
                                 <p class="onlyclicked" style="display:none">${result.description}</p>
                             </div>`
                     )
@@ -106,7 +106,7 @@
                     let htmlSegment = `<div class="pokemon">
                             <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
                             <img style="display: block;" src="${pokemon.image}" width="150px">
-                            <p class="onlyclicked" style="display:none">${pokemon.price}</p>
+                            <p class="onlyclicked" style="display:none">Price: $ ${pokemon.price}</p>
                             <p class="onlyclicked" style="display:none">${pokemon.description}</p>
                         </div>`;
                     html += htmlSegment;
@@ -125,7 +125,7 @@
                 html += `<div class="pokemon">
                             <h4 class="onlyclicked" style="display:none" >${result[0].name}</h4>
                             <img style="display: block;" src="${result[0].image}" width="150px">
-                            <p class="onlyclicked" style="display:none">${result[0].price}</p>
+                            <p class="onlyclicked" style="display:none">Price: $ ${result[0].price}</p>
                             <p class="onlyclicked" style="display:none">${result[0].description}</p>
                         </div>`;
                 let container = document.querySelector('.products');
@@ -143,7 +143,7 @@
                     let htmlSegment = `<div class="pokemon">
                             <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
                             <img style="display: block;" src="${pokemon.image}" width="150px">
-                            <p class="onlyclicked" style="display:none">${pokemon.price}</p>
+                            <p class="onlyclicked" style="display:none">Price: $ ${pokemon.price}</p>
                             <p class="onlyclicked" style="display:none">${pokemon.description}</p>
                         </div>`;
                     html += htmlSegment;
@@ -179,7 +179,7 @@
                     let htmlSegment = `<div class="pokemon">
                             <h4 class="onlyclicked" style="display:none" >${pokemon.name}</h4>
                             <img style="display: block;" src="${pokemon.image}" width="150px">
-                            <p class="onlyclicked" style="display:none">${pokemon.price}</p>
+                            <p class="onlyclicked" style="display:none">Price: $ ${pokemon.price}</p>
                             <p class="onlyclicked" style="display:none">${pokemon.description}</p>
                         </div>`;
                     html += htmlSegment;
