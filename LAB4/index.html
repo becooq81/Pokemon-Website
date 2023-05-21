@@ -217,8 +217,8 @@
             document.getElementById("clicked").addEventListener("click", function(e) {
                 console.log(e.target);
                 let v = e.target;
-                v.nextElementSibling.style.display="block";
                 v.previousElementSibling.style.display="block";
+                v.nextElementSibling.style.display="block";
                 v.nextElementSibling.nextElementSibling.style.display="block";
             })
         </script>
