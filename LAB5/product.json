@@ -1,0 +1,655 @@
+[
+    {
+        "name": "Mewtwo",
+        "region": "Kanto",
+        "image": "images/mewtwo.png",
+        "price": 25,
+        "description": "Mewtwo (Japanese: ミュウツー Mewtwo) is a Psychic-type Legendary Pokémon introduced in Generation I."
+    },
+    {
+        "name": "Dragonite",
+        "region": "Kanto",
+        "image": "images/dragonite.png",
+        "price": 25,
+        "description": "Dragonite (Japanese: カイリュー Kairyu) is a dual-type Dragon/Flying pseudo-legendary Pokémon introduced in Generation I."
+    },
+    {
+        "name": "Gyarados",
+        "region": "Kanto",
+        "image": "images/gyarados.png",
+        "price": 25,
+        "description": "Gyarados (Japanese: ギャラドス Gyarados) is a dual-type Water/Flying Pokémon introduced in Generation I."
+    },
+    {
+        "name": "Snorlax",
+        "region": "Kanto",
+        "image": "images/snorlax.png",
+        "price": 25,
+        "description": "Snorlax (Japanese: カビゴン Kabigon) is a Normal-type Pokémon introduced in Generation I. It evolves from Munchlax when leveled up with high friendship."
+    },
+    {
+        "name": "Charizard",
+        "region": "Kanto",
+        "image": "images/charizard.png",
+        "price": 25,
+        "description": "Charizard (Japanese: リザードン Lizardon) is a dual-type Fire/Flying Pokémon introduced in Generation I."
+    },
+    {
+        "name": "Alakazam",
+        "region": "Kanto",
+        "image": "images/alakazam.png",
+        "price": 25,
+        "description": "Alakazam (Japanese: フーディン Foodin) is a Psychic-type Pokémon introduced in Generation I."
+    },
+    {
+        "name": "Gengar",
+        "region": "Kanto",
+        "image": "images/gengar.png",
+        "price": 25,
+        "description": "Gengar (Japanese: ゲンガー Gangar) is a dual-type Ghost/Poison Pokémon introduced in Generation I."
+    },
+    {
+        "name": "Venusaur",
+        "region": "Kanto",
+        "image": "images/venusaur.webp",
+        "price": 25,
+        "description": "Venusaur (Japanese: フシギバナ Fushigibana) is a dual-type Grass/Poison Pokémon introduced in Generation I."
+    },
+    {
+        "name": "Flareon",
+        "region": "Kanto",
+        "image": "images/flareon.png",
+        "price": 25,
+        "description": "Flareon (Japanese: ブースター Booster) is a Fire-type Pokémon introduced in Generation I."
+    },
+    {
+        "name": "Clefable",
+        "region": "Kanto",
+        "image": "images/clefable.png",
+        "price": 25,
+        "description": "Clefable (Japanese: ピクシー Pixy) is a Fairy-type Pokémon introduced in G"
+    },
+    {
+        "name": "Lapras",
+        "region": "Kanto",
+        "image": "images/lapras.webp",
+        "price": 25,
+        "description": "Lapras (Japanese: ラプラス Laplace) is a dual-type Water/Ice Pokémon introduced in Generation I."
+    },
+    {
+        "name": "Tauros",
+        "region": "Kanto",
+        "image": "images/Tauros.png",
+        "price": 25,
+        "description": "Tauros (Japanese: ケンタロス Kentauros) is a Normal-type Pokémon introduced in Generation I."
+    },
+    {
+        "name": "Raichu",
+        "region": "Kanto",
+        "image": "images/raichu.png",
+        "price": 25,
+        "description": "Raichu (Japanese: ライチュウ Raichu) is an Electric-type Pokémon introduced in Generation I."
+    },
+    {
+        "name": "Unown",
+        "region": "Johto",
+        "image": "images/unown.png",
+        "price": 5,
+        "description": "Unown (Japanese: アンノーン Unknown) is a Psychic-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Sudowoodo",
+        "region": "Johto",
+        "image": "images/sundowoodo.png",
+        "price": 15,
+        "description": "Sudowoodo (Japanese: ウソッキー Usokkie) is a Rock-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Tyranitar",
+        "region": "Johto",
+        "image": "images/tyranitar.png",
+        "price": 25,
+        "description": "Tyranitar (Japanese: バンギラス Bangiras) is a dual-type Rock/Dark pseudo-legendary Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Typhlosion",
+        "region": "Johto",
+        "image": "images/typhlosion.png",
+        "price": 25,
+        "description": "Typhlosion (Japanese: バクフーン Bakphoon) is a Fire-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Slowking",
+        "region": "Johto",
+        "image": "images/slowking.png",
+        "price": 20,
+        "description": "Slowking (Japanese: ヤドキング Yadoking) is a dual-type Water/Psychic Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Umbreon",
+        "region": "Johto",
+        "image": "images/umbreon.png",
+        "price": 23,
+        "description": "Umbreon (Japanese: ブラッキー Blacky) is a Dark-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Meganium",
+        "region": "Johto",
+        "image": "images/meganium.png",
+        "price": 24,
+        "description": "Meganium (Japanese: メガニウム Meganium) is a Grass-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Bellossom",
+        "region": "Johto",
+        "image": "images/bellossom.jpg",
+        "price": 22,
+        "description": "Bellossom (Japanese: キレイハナ Kireihana) is a Grass-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Houndoom",
+        "region": "Johto",
+        "image": "images/houndoom.png",
+        "price": 22,
+        "description": "Houndoom (Japanese: ヘルガー Hellgar) is a dual-type Dark/Fire Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Ampharos",
+        "region": "Johto",
+        "image": "images/ampharos.png",
+        "price": 21,
+        "description": "Ampharos (Japanese: デンリュウ Denryu) is an Electric-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Slaking",
+        "region": "Hoenn",
+        "image": "images/slaking.png",
+        "price": 25,
+        "description": "Slaking (Japanese: ケッキング Kekking) is a Normal-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Kyogre",
+        "region": "Hoenn",
+        "image": "images/kyogre.png",
+        "price": 30,
+        "description": "Kyogre (Japanese: カイオーガ Kyogre) is a Water-type Legendary Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Groudon",
+        "region": "Hoenn",
+        "image": "images/groudon.png",
+        "price": 30,
+        "description": "Groudon (Japanese: グラードン Groudon) is a Ground-type Legendary Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Metagross",
+        "region": "Hoenn",
+        "image": "images/metagross.png",
+        "price": 26,
+        "description": "Metagross (Japanese: メタグロス Metagross) is a dual-type Steel/Psychic pseudo-legendary Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Salamence",
+        "region": "Hoenn",
+        "image": "images/salamence.png",
+        "price": 26,
+        "description": "Salamence (Japanese: ボーマンダ Bohmander) is a dual-type Dragon/Flying pseudo-legendary Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Rayquaza",
+        "region": "Hoenn",
+        "image": "images/rayquaza.png",
+        "price": 30,
+        "description": "Rayquaza (Japanese: レックウザ Rayquaza) is a dual-type Dragon/Flying Legendary Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Latios",
+        "region": "Hoenn",
+        "image": "images/latios.png",
+        "price": 30,
+        "description": "Latios (Japanese: ラティオス Latios) is a dual-type Dragon/Psychic Legendary Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Latias",
+        "region": "Hoenn",
+        "image": "images/latias.jpg",
+        "price": 30,
+        "description": "Latias (Japanese: ラティアス Latias) is a dual-type Dragon/Psychic Legendary Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Breloom",
+        "region": "Hoenn",
+        "image": "images/breloom.png",
+        "price": 25,
+        "description": "Breloom (Japanese: キノガッサ Kinogassa) is a dual-type Grass/Fighting Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Banette",
+        "region": "Hoenn",
+        "image": "images/banette.png",
+        "price": 25,
+        "description": "Banette (Japanese: ジュペッタ Juppeta) is a Ghost-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Hariyama",
+        "region": "Hoenn",
+        "image": "images/hariyama.jpg",
+        "price": 25,
+        "description": "Hariyama (Japanese: ハリテヤマ Hariteyama) is a Fighting-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Absol",
+        "region": "Hoenn",
+        "image": "images/absol.png",
+        "price": 25,
+        "description": "Absol (Japanese: アブソル Absol) is a Dark-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Regice",
+        "region": "Hoenn",
+        "image": "images/regice.jpg",
+        "price": 27,
+        "description": "Regice (Japanese: レジアイス Regice) is an Ice-type Legendary Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Altaria",
+        "region": "Hoenn",
+        "image": "images/altaria.png",
+        "price": 25,
+        "description": "Altaria (Japanese: チルタリス Tyltalis) is a dual-type Dragon/Flying Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Regirock",
+        "region": "Hoenn",
+        "image": "images/regirock.jpg",
+        "price": 27,
+        "description": "Regirock (Japanese: レジロック Regirock) is a Rock-type Legendary Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Sceptile",
+        "region": "Hoenn",
+        "image": "images/sceptile.png",
+        "price": 25,
+        "description": "Sceptile (Japanese: ジュカイン Jukain) is a Grass-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Seviper",
+        "region": "Hoenn",
+        "image": "images/seviper.jpg",
+        "price": 25,
+        "description": "Seviper (Japanese: ハブネーク Habunake) is a Poison-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Registeel",
+        "region": "Hoenn",
+        "image": "images/registeel.jpg",
+        "price": 25,
+        "description": "Registeel (Japanese: レジスチル Registeel) is a Steel-type Legendary Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Giratina",
+        "region": "Sinnoh",
+        "image": "images/giratina.png",
+        "price": 30,
+        "description": "Giratina (Japanese: ギラティナ Giratina) is a dual-type Ghost/Dragon Legendary Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Toxicroak",
+        "region": "Sinnoh",
+        "image": "images/toxicroak.jpg",
+        "price": 25,
+        "description": "Toxicroak (Japanese: ドクロッグ Dokurog) is a dual-type Poison/Fighting Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Abomasnow",
+        "region": "Sinnoh",
+        "image": "images/abomasnow.png",
+        "price": 25,
+        "description": "Abomasnow (Japanese: ユキノオー Yukinooh) is a dual-type Grass/Ice Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Staraptor",
+        "region": "Sinnoh",
+        "image": "images/staraptor.png",
+        "price": 25,
+        "description": "Staraptor (Japanese: ムクホーク Mukuhawk) is a dual-type Normal/Flying Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Gallade",
+        "region": "Sinnoh",
+        "image": "images/gallade.png",
+        "price": 25,
+        "description": "Gallade (Japanese: エルレイド Erureido) is a dual-type Psychic/Fighting Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Purugly",
+        "region": "Sinnoh",
+        "image": "images/purugly.jpg",
+        "price": 22,
+        "description": "Purugly (Japanese: ブニャット Bunyatto) is a Normal-type Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Magnezone",
+        "region": "Sinnoh",
+        "image": "images/magnezone.png",
+        "price": 25,
+        "description": "Magnezone (Japanese: ジバコイル Jibacoil) is a dual-type Electric/Steel Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Torterra",
+        "region": "Sinnoh",
+        "image": "images/torterra.jpg",
+        "price": 25,
+        "description": "Torterra (Japanese: ドダイトス D"
+    },
+    {
+        "name": "Dialga",
+        "region": "Sinnoh",
+        "image": "images/dialga.png",
+        "price": 30,
+        "description": "Dialga (Japanese: ディアルガ Dialga) is a dual-type Steel/Dragon Legendary Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Palkia",
+        "region": "Sinnoh",
+        "image": "images/palkia.jpg",
+        "price": 30,
+        "description": "Palkia (Japanese: パルキア Palkia) is a dual-type Water/Dragon Legendary Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Infernape",
+        "region": "Sinnoh",
+        "image": "images/infernape.png",
+        "price": 25,
+        "description": "Infernape (Japanese: ゴウカザル Goukazaru) is a dual-type Fire/Fighting Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Roserade",
+        "region": "Sinnoh",
+        "image": "images/roserade.jpeg",
+        "price": 25,
+        "description": "Roserade (Japanese: ロズレイド Roserade) is a dual-type Grass/Poison Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Shinx",
+        "region": "Sinnoh",
+        "image": "images/Shinx.png",
+        "price": 10,
+        "description": "Shinx (Japanese: コリンク Kolink) is an Electric-type Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Shaymin",
+        "region": "Sinnoh",
+        "image": "images/Shaymin.png",
+        "price": 10,
+        "description": "Shaymin (Japanese: シェイミ Shaymin) is a Grass-type Mythical Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Skorupi",
+        "region": "Sinnoh",
+        "image": "images/skorupi.jpg",
+        "price": 10,
+        "description": "Skorupi (Japanese: スコルピ Scorupi) is a dual-type Poison/Bug Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Cherrim",
+        "region": "Sinnoh",
+        "image": "images/Cherrim.webp",
+        "price": 10,
+        "description": "Cherrim (Japanese: チェリム Cherrim) is a Grass-type Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Mothim",
+        "region": "Sinnoh",
+        "image": "images/Mothim.png",
+        "price": 10,
+        "description": "Mothim (Japanese: ガーメイル Gamale) is a dual-type Bug/Flying Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Shieldon",
+        "region": "Sinnoh",
+        "image": "images/shieldon.png",
+        "price": 10,
+        "description": "Shieldon (Japanese: タテトプス Tatetops) is a dual-type Rock/Steel Fossil Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Happiny",
+        "region": "Sinnoh",
+        "image": "images/Happiny.png",
+        "price": 10,
+        "description": "Happiny (Japanese: ピンプク Pinpuku) is a Normal-type baby Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Lickitung",
+        "region": "Sinnoh",
+        "image": "images/Lickitung.jpg",
+        "price": 10,
+        "description": "Lickitung (Japanese: ベロリンガ Beroringa) is a Normal-type Pokémon introduced in Generation I."
+    },
+    {
+        "name": "Piplup",
+        "region": "Sinnoh",
+        "image": "images/piplup.png",
+        "price": 10,
+        "description": "Piplup (Japanese: ポッチャマ Pochama) is a Water-type Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Stunky",
+        "region": "Sinnoh",
+        "image": "images/stunky.png",
+        "price": 10,
+        "description": "Stunky (Japanese: スカンプー Skunpuu) is a dual-type Poison/Dark Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Gastrodon",
+        "region": "Hoenn",
+        "image": "images/Gastrodon.png",
+        "price": 10,
+        "description": "Gastrodon (Japanese: トリトドン Tritodon) is a dual-type Water/Ground Pokémon introduced in Generation IV."
+    },
+    {
+        "name": "Clamperl",
+        "region": "Hoenn",
+        "image": "images/Clamperl.png",
+        "price": 10,
+        "description": "Clamperl (Japanese: パールル Pearlulu) is a Water-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Loudred",
+        "region": "Hoenn",
+        "image": "images/Loudred.jpg",
+        "price": 10,
+        "description": "Loudred (Japanese: ドゴーム Dogohmb) is a Normal-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Milotic",
+        "region": "Hoenn",
+        "image": "images/Milotic.png",
+        "price": 10,
+        "description": "Milotic (Japanese: ミロカロス Milokaross) is a Water-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Bagon",
+        "region": "Hoenn",
+        "image": "images/Bagon.png",
+        "price": 10,
+        "description": "Bagon (Japanese: タツベイ Tatsubay) is a Dragon-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Spheal",
+        "region": "Hoenn",
+        "image": "images/Spheal.png",
+        "price": 10,
+        "description": "Spheal (Japanese: タマザラシ Tamazarashi) is a dual-type Ice/Water Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Mawile",
+        "region": "Hoenn",
+        "image": "images/Mawile.png",
+        "price": 17,
+        "description": "Mawile (Japanese: クチート Kucheat) is a dual-type Steel/Fairy Pokémon introduced in Generation III. Prior to Generation VI, it was a pure Steel-type Pokémon."
+    },
+    {
+        "name": "Mudkip",
+        "region": "Hoenn",
+        "image": "images/Mudkip.png",
+        "price": 10,
+        "description": "Mudkip (Japanese: ミズゴロウ Mizugorou) is a Water-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Shuppet",
+        "region": "Hoenn",
+        "image": "images/Shuppet.png",
+        "price": 10,
+        "description": "Shuppet (Japanese: カゲボウズ Kagebouzu) is a Ghost-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Lunatone",
+        "region": "Hoenn",
+        "image": "images/Lunatone.png",
+        "price": 10,
+        "description": "Lunatone (Japanese: ルナトーン Lunatone) is a dual-type Rock/Psychic Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Dustox",
+        "region": "Hoenn",
+        "image": "images/Dustox.png",
+        "price": 10,
+        "description": "Dustox (Japanese: ドクケイル Dokucale) is a dual-type Bug/Poison Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Beautifly",
+        "region": "Hoenn",
+        "image": "images/Beautifly.png",
+        "price": 10,
+        "description": "Beautifly (Japanese: アゲハント Agehunt) is a dual-type Bug/Flying Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Manectric",
+        "region": "Hoenn",
+        "image": "images/Manectric.jpg",
+        "price": 15,
+        "description": "Manectric (Japanese: ライボルト Livolt) is an Electric-type Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Shiftry",
+        "region": "Hoenn",
+        "image": "images/Shiftry.jpg",
+        "price": 10,
+        "description": "Shiftry (Japanese: ダーテング Dirteng) is a dual-type Grass/Dark Pokémon introduced in Generation III."
+    },
+    {
+        "name": "Sunflora",
+        "region": "Johto",
+        "image": "images/Sunflora.png",
+        "price": 15,
+        "description": "Sunflora (Japanese: キマワリ Kimawari) is a Grass-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Steelix",
+        "region": "Johto",
+        "image": "images/Steelix.png",
+        "price": 15,
+        "description": "Steelix (Japanese: ハガネール Haganeil) is a dual-type Steel/Ground Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Dunsparce",
+        "region": "Johto",
+        "image": "images/Dunsparce.png",
+        "price": 15,
+        "description": "Dunsparce (Japanese: ノコッチ Nokocchi) is a Normal-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Feraligatr",
+        "region": "Johto",
+        "image": "images/Feraligatr.png",
+        "price": 15,
+        "description": "Feraligatr (Japanese: オーダイル Ordile) is a Water-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Granbull",
+        "region": "Johto",
+        "image": "images/Granbull.png",
+        "price": 15,
+        "description": "Granbull (Japanese: グランブル Granbulu) is a Fairy-type Pokémon introduced in Generation II. Prior to Generation VI, it was a Normal-type Pokémon."
+    },
+    {
+        "name": "Scizor",
+        "region": "Johto",
+        "image": "images/Scizor.jpg",
+        "price": 15,
+        "description": "Scizor (Japanese: ハッサム Hassam) is a dual-type Bug/Steel Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Crobat",
+        "region": "Johto",
+        "image": "images/Crobat.png",
+        "price": 15,
+        "description": "Crobat (Japanese: クロバット Crobat) is a dual-type Poison/Flying Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Suicune",
+        "region": "Johto",
+        "image": "images/suicune.jpg",
+        "price": 15,
+        "description": "Suicune (Japanese: スイクン Suicune) is a Water-type Legendary Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Donphan",
+        "region": "Johto",
+        "image": "images/Donphan.png",
+        "price": 15,
+        "description": "Donphan (Japanese: ドンファン Donfan) is a Ground-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Delibird",
+        "region": "Johto",
+        "image": "images/Delibird.jpg",
+        "price": 15,
+        "description": "Delibird (Japanese: デリバード Delibird) is a dual-type Ice/Flying Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Jumpluff",
+        "region": "Johto",
+        "image": "images/Jumpluff.png",
+        "price": 15,
+        "description": "Jumpluff (Japanese: ワタッコ Watacco) is a dual-type Grass/Flying Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Sneasel",
+        "region": "Johto",
+        "image": "images/Sneasel.png",
+        "price": 15,
+        "description": "Sneasel (Japanese: ニューラ Nyula) is a dual-type Dark/Ice Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Totodile",
+        "region": "Johto",
+        "image": "images/Totodile.png",
+        "price": 7,
+        "description": "Totodile (Japanese: ワニノコ Waninoko) is a Water-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Pichu",
+        "region": "Johto",
+        "image": "images/Pichu.png",
+        "price": 7,
+        "description": "Pichu (Japanese: ピチュー Pichu) is an Electric-type baby Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Phanpy",
+        "region": "Johto",
+        "image": "images/Phanpy.png",
+        "price": 8,
+        "description": "Phanpy (Japanese: ゴマゾウ Gomazou) is a Ground-type Pokémon introduced in Generation II."
+    },
+    {
+        "name": "Lugia",
+        "region": "Johto",
+        "image": "images/Lugia.png",
+        "price": 30,
+        "description": "Lugia (Japanese: ルギア Lugia) is a dual-type Psychic/Flying Legendary Pokémon introduced in Generation II"
+    }
+    
+
+]

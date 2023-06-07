@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://127.0.0.1:5501/LAB4/index.html?region=All&term=&sort=none -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        
+        <title>Main</title>
+        
+    <link rel="stylesheet" type="text/css" href="./Main_files/main.css"></head>
+    <body>
+        <div class="header">
+            <h1>Welcome to Poke Shop!</h1>
+        </div>
+        <div class="menu">
+            <a href="http://127.0.0.1:5501/LAB4/index.html">메인</a>
+            <a href="http://127.0.0.1:5501/LAB4/login.html">로그인</a>
+            <a href="http://127.0.0.1:5501/LAB4/signup.html">회원가입</a>
+        </div>
+        <div class="content">
+            <div class="search">
+                <form action="http://127.0.0.1:5501/LAB4/index.html?region=All&amp;term=&amp;sort=none" id="myForm" onsubmit="makeRequest()">
+                    Choose a region:
+                    <select name="region" id="region">
+                        <option value="All">All</option>
+                        <option value="Kanto">Kanto</option>
+                        <option value="Johto">Johto</option>
+                        <option value="Hoenn">Hoenn</option>
+                        <option value="Sinnoh">Sinnoh</option>
+                    </select><br>
+                    Enter a search term:
+                    <input name="term" type="text" size="20" id="term"><br>
+                    Choose a sort:
+                    <select name="sort" id="sort">
+                        <option value="none">None</option>
+                        <option value="">Alphabetical order</option>
+                        <option value="">Cheapest to costliest</option>
+                    </select><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="products"></div>
+            <div class="loading-container"></div>
+        </div>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+    <script>
+        /**
+        function makeRequest() {
+            let url = './product.json';
+            let myForm = document.getElementById('myForm');
+            let params = new FormData(myForm);
+            fetch(url, {method: "GET", body: params})
+            .then((response) => {
+                return response.json()
+            })
+            .then(data => console.log(data))
+            .catch(function(error) {
+                console.log(error);
+            });
+        }
+        makeRequest();
+        
+        
+        function show(data) {
+            let tab = 
+                `<tr>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Region</th>
+                    <th>Price</th>
+                </tr>`;
+            data.forEach(pokemon => {
+                tab += `<tr>
+                    <td>${r.name} </td>
+                    <td>${r.image} </td>
+                    <td>${r.region} </td>
+                    <td>${r.price} </td>
+                </tr>`;
+            });
+            document.getElementById("pokemons").innerHTML = tab;
+        }**/
+
+        var pokemons = getPokemons();
+
+        async function getPokemons() {
+            let url = 'product.json';
+            try {
+                let res = await fetch(url);
+                return await res.json();
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        async function renderPokemons() {
+            let pokemons = await getPokemons();
+            let html = '';
+
+            var formEl = document.getElementById('myForm');
+            var formData = new FormData(formEl);
+
+            var region = formData.get('region');
+
+            var filtered = pokemons.filter(value => value.region == region);
+
+            pokemons.forEach(pokemon => {
+                let htmlSegment = `<div class="pokemon">
+                        <h4 id="onlyclicked" >${pokemon.name}</h4>
+                        <img onclick="display()" style="display: block;" src="${pokemon.image}" width="150px">
+                        <p id="onlyclicked" >${pokemon.price}</p>
+                    </div>`;
+                html += htmlSegment;
+            });
+
+            let container = document.querySelector('.products');
+            container.innerHTML = html;
+        }
+        renderPokemons();
+        
+        async function makeRequest() {
+            let url = 'product.json';
+            let myForm = document.getElementById('myForm');
+            let params = new FormData(myForm);
+
+            console.log(params);
+
+            fetch(url)
+            .then((response) => response.json)
+            .then((data) => processData(data, params))
+            .catch(function(error) {
+                console.log(error);
+            });
+            
+        }
+        async function processData(data, params) {
+            
+        }
+
+        document.querySelector("#myForm").addEventListener("submit", norefresh);
+        function norefresh() {
+            event.preventDefault();
+        }
+
+        var body = document.querySelector("body");
+        body.onscroll = function () {
+            if (window.scrollY > (document.body.offsetHeight - window.outerHeight)) {
+                body.style.height = document.body.offsetHeight +200 +"px";
+            }
+        }
+
+        var item = document.querySelector(".pokemon");
+        
+        var pokemonlist = document.getElementsByClassName("pokemon");
+        console.log(pokemonlist);
+        for (var i = 0; i < pokemonlist.length; i++) {
+            pokemonlist[i].onclick = function() {
+                pokemonlist[i].style.
+            }
+        }
+
+    </script>
+</body></html>
