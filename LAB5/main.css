@@ -85,21 +85,21 @@ body {
     flex-direction: row;
     padding: 2%;
 }
-.loading-container {
+.loader.hidden {
+    display: none;
+}
+.loader {
     text-align: center;
-    font-size: 15px;
 }
 .products {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding-left: 2%;
-    margin-top: -20px;
     overflow-y: scroll;
 }
 .search {
     display: flex;
-    size: 13px;
 }
 #myForm {
     line-height: 2em;
@@ -117,11 +117,11 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
 }
-.pokemon {
+.onlyclicked {
     display: none;
 }
 .poke-img {
-    width: 150px;
+    max-width: 150px;
     transition: transform 2s;
 }
 .poke-img:hover {
