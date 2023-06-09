@@ -98,6 +98,15 @@ body {
     padding-left: 2%;
     overflow-y: scroll;
 }
+.product {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+.product-img {
+    width: 700px;
+}
 .search {
     display: flex;
 }

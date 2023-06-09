@@ -18,7 +18,6 @@ app.use('/images', express.static('images'));
 app.get('/', async function (req, res) {
     let db = await getDBConnection();
     
-
     if (req.query?.term) {
         var rows = await db.all("select * from products WHERE product_title LIKE '%" + req.query.term + "%'");
     } else if (req.query?.region) {
@@ -28,12 +27,12 @@ app.get('/', async function (req, res) {
         var rows = await db.all("select * from products");
     }
     await db.close();
-    
+
     my_product = '';
     for (var i = 0; i < rows.length; i++) {
         my_product += '<div width="150px"><h4>'
             +rows[i]['product_title'] + '</h4>'
-            + ' <img width="150px" src="'+ rows[i]['product_image'] +'"/> '
+            + ' <a href="/product/'+ rows[i]['product_id']+'"><img width="150px" src="'+ rows[i]['product_image'] +'"/></a> '
             + '<p>Price: $' + rows[i]['product_price'] + '</p>'
             + '<p>Region: ' + rows[i]['product_category']+'</p></div>';
     }
@@ -44,7 +43,7 @@ app.get('/', async function (req, res) {
         <head>
             <meta charset="utf-8">
             <title>Main</title>
-            <link rel="stylesheet" type="text/css" href="main.css">
+            <link rel="stylesheet" type="text/css" href="/main.css">
         </head>
         <body>
             <div class="header">
@@ -92,7 +91,7 @@ app.get('/login', async function (req, res) {
         <head>
             <meta charset="utf-8">
             <title>Log in</title>
-            <link rel="stylesheet" type="text/css" href="main.css">
+            <link rel="stylesheet" type="text/css" href="/main.css">
         </head>
         <body>
             <div class="header">
@@ -133,7 +132,7 @@ app.get('/signup', async function (req, res) {
         <head>
             <meta charset="utf-8">
             <title>Sign up</title>
-            <link rel="stylesheet" type="text/css" href="main.css">
+            <link rel="stylesheet" type="text/css" href="/main.css">
         </head>
         <body>
             <div class="header">
@@ -230,6 +229,44 @@ app.get('/signup', async function (req, res) {
     </html>`;
     res.send(output);
 });
+
+app.get('/product/:product_id', async function (req, res) {
+    let db = await getDBConnection();
+    var row = await db.all("select * from products WHERE product_id ==" + req.params.product_id);
+    await db.close();
+
+    my_product = '<div class="product-image"><img src="/'+row[0]['product_image']+'"></div>'
+            + '<div><p>'+row[0]['product_id']
+            +'<h2>'+row[0]['product_title']+'</h2>'
+            + '<h3>Region: '+row[0]['product_category']+'</h3>'
+            + '<h4>Price: $'+row[0]['product_price']+'</h4>'
+            +'</p></div>';
+    var output =
+    `<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Pokemon</title>
+            <link rel="stylesheet" type="text/css" href="/main.css">
+        </head>
+        <body>
+            <div class="header">
+                <h1>Welcome to Poke Shop!</h1>
+            </div>
+            <div class="menu">
+                <a href="/">메인</a>
+                <a href="/login">로그인</a>
+                <a href="/signup">회원가입</a>
+            </div>
+            <div class="product">
+                ${my_product}
+            </div>
+        </body>
+    </html>`;
+    res.send(output);
+});
+
+
 
 const port = 3000;
 
