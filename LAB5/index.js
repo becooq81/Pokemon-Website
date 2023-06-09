@@ -17,8 +17,18 @@ app.use('/images', express.static('images'));
 
 app.get('/', async function (req, res) {
     let db = await getDBConnection();
-    let rows = await db.all("select * from products");
+    
+
+    if (req.query?.term) {
+        var rows = await db.all("select * from products WHERE product_title LIKE '%" + req.query.term + "%'");
+    } else if (req.query?.region) {
+        var rows = await db.all("select * from products WHERE product_category LIKE '%" + req.query.region + "%'");
+    }
+    else {
+        var rows = await db.all("select * from products");
+    }
     await db.close();
+    
     my_product = '';
     for (var i = 0; i < rows.length; i++) {
         my_product += '<div width="150px"><h4>'
@@ -27,8 +37,7 @@ app.get('/', async function (req, res) {
             + '<p>Price: $' + rows[i]['product_price'] + '</p>'
             + '<p>Region: ' + rows[i]['product_category']+'</p></div>';
     }
-
-    console.log(my_product);
+    
     var output = 
     `<!DOCTYPE html>
     <html>
@@ -76,7 +85,7 @@ app.get('/', async function (req, res) {
     res.send(output);
 });
 
-app.get('/login', function (req, res) {
+app.get('/login', async function (req, res) {
     var output = 
     `<!DOCTYPE html>
     <html lang="ko">
@@ -117,7 +126,7 @@ app.get('/login', function (req, res) {
     res.send(output);
 });
 
-app.get('/signup', function (req, res) {
+app.get('/signup', async function (req, res) {
     var output =
     `<!DOCTYPE html>
     <html lang="ko">
